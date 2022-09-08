@@ -1,19 +1,23 @@
 #   a114_nested_loops_2.py 
 import turtle as trtl
 
-painter = trtl.Turtle()
-painter.shape("circle")
-painter.hideturtle()
-painter.penup()
-
-x = -200
-while (x < 200): 
-  x = x + 50
-  y = 200
-  painter.goto(x,y)
-  painter.color("red")
-  painter.stamp()
-
+color1 = "orange"
+color2 = "purple"
 
 wn = trtl.Screen()
-wn.mainloop()
+width = 400
+height = 300
+
+painter = trtl.Turtle()
+painter.speed(0)
+painter.color(color1)
+
+answer = "y"
+while answer == "y":
+  wn.clearscreen()
+  painter.goto(0, 0)
+  space = 1
+  angle = int(input("angle:"))
+  seg = int(360/angle)
+  answer = input("again")
+  

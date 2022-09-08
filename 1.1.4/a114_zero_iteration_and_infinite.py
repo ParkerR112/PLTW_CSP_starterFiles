@@ -6,11 +6,14 @@ import turtle as trtl
 painter = trtl.Turtle()
 painter.speed(0)
 
+go = False
 # Add a loop with a zero-iteration condition
-
+while go == True:
+    painter.circle(100)
 
 # Add an infinite loop
-
+while go == False:
+    painter.circle(50)
 
 wn = trtl.Screen()
 wn.mainloop()
