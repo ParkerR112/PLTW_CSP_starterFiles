@@ -26,7 +26,7 @@ def turn_right():
 #----- init screen
 wn = trtl.Screen()
 wn.setup(width=screen_w, height=screen_h)
-robot_image = "robot.gif"
+robot_image = "1.1.5/robot.gif"
 wn.addshape(robot_image)
 
 #----- init robot
@@ -42,17 +42,17 @@ robot.speed(2)
 robot.showturtle()
 
 #---- TODO: change maze here
-wn.bgpic("maze1.png") # other file names should be maze2.png, maze3.png
+wn.bgpic("1.1.5/maze1.png") # other file names should be maze2.png, maze3.png
 
 #---- TODO: begin robot movement here
+for step in range(4):
+  move()
+turn_right()
+for step in range(4):
+  move()
 # move robot forward with move()
 # turn robot left with turn_left()
-# sample for loop:
-for step in range(2):
-  for step in range(4): 
-    move()
-  turn_right()
-
+# sample while loop:
 
 #---- end robot movement 
 
