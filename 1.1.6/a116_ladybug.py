@@ -39,9 +39,9 @@ while (num_dots <= 2 ):
   ladybug.circle(2)
 
   # position next dots
-  xpos = ypos + 25
+  ypos = ypos + 25
   xpos = xpos + 5
-  num_dot = num_dots + 1
+  num_dots = num_dots + 1
 
 ladybug.hideturtle()
 
