@@ -6,11 +6,29 @@ ladybug = trtl.Turtle()
 ladybug.pensize(40)
 ladybug.circle(5)
 
+# configure spider legs
+numOfLegs = 6
+legLength = 70
+degreeOfTurn = 315 / numOfLegs
+ladybug.color("black")
+ladybug.pensize(5)
+interator = 0
+
+# draw the legs of the spider
+while (interator < numOfLegs):
+  ladybug.penup()
+  ladybug.goto(0,-40)
+  ladybug.pendown()
+  ladybug.setheading((degreeOfTurn*interator) + 135)
+  ladybug.forward(legLength)
+  interator += 1
+
 # and body
 ladybug.penup()
 ladybug.goto(0, -55) 
 ladybug.color("red")
 ladybug.pendown()
+ladybug.setheading(0)
 ladybug.pensize(40)
 ladybug.circle(20)
 ladybug.setheading(270)
