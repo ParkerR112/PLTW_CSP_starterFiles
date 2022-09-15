@@ -6,41 +6,46 @@ def move(x, y):
   spider.penup()
   spider.goto(x, y)
   spider.pendown()
+def leg(x, y, headed):
+  spider.penup()
+  spider.goto(x, y)
+  spider.setheading(headed)
+  spider.pendown()
+  spider.circle(150, 80)
 
 # draw the body of the spider
 spider = trtl.Turtle()
 spider.shape("circle")
-spider.pensize(40)
-spider.circle(20)
+spider.pensize(5)
+spider.begin_fill()
+spider.circle(50)
+spider.end_fill()
 
 # draw the head of the spider
-move(0, -45)
+move(0, -55)
 spider.shape("circle")
-spider.pensize(30)
-spider.circle(10)
-
-# configure spider legs
-numOfLegs = 8
-legLength = 70
-degreeOfTurn = 270 / numOfLegs
-spider.color("black")
 spider.pensize(5)
-interator = 0
-
-# draw the legs of the spider
-while (interator < numOfLegs):
-  move(0,20)
-  spider.setheading((degreeOfTurn*interator) - 27)
-  spider.forward(legLength)
-  interator += 1
+spider.begin_fill()
+spider.circle(30)
+spider.end_fill()
 
 # draw the eyes of the spider
-spider.shapesize(1)
 move(-10, -40)
 spider.color("purple")
 spider.stamp()
 move(10, -40)
 spider.stamp()
+
+# Drawing Legs
+spider.color("black")
+leg(0, 50, 200)
+leg(0, 50, 180)
+leg(0, 50, 160)
+leg(0, 50, 140)
+leg(96.42, -117, 80)
+leg(147.72, -73.95, 100)
+leg(181.21, -15.95, 120)
+leg(192.84, 50, 140)
 
 spider.hideturtle()
 wn = trtl.Screen()
