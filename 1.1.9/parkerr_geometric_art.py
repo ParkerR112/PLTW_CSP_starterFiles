@@ -78,30 +78,49 @@ def octagon(sideLength, x, y, fill):
         t.right(45)
     t.end_fill()
 
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+colors = ['red', 'pink', 'orange', 'yellow', 'green', 'light green', 'blue', 'light blue', 'purple', 'magenta', 'dark blue', 'dark green']
 shapes = ['triangle', 'square', 'pentagon', 'hexagon', 'octagon']
 
 t.pensize(8)
 
-for i in range(10):
-    shapeColor = random.choice(colors)
-    shapeFill = random.randint(0, 1)
-
-for i in colors:
+for num in range(20):
     shape = random.choice(shapes)
+    i = random.choice(colors)
     if shape == 'triangle':
         fill = random.randint(0, 1)
         t.fillcolor(i)
         t.pencolor(i)
-        x = random.randint(-200, 200)
-        y = random.randint(-200, 200)
-        triangle(random.randint(100, 200), x, y, fill)
+        x = random.randint(-100, 100)
+        y = random.randint(-100, 100)
+        triangle(random.randint(50, 90), x, y, fill)
     if shape == 'square':
         fill = random.randint(0, 1)
         t.fillcolor(i)
         t.pencolor(i)
-        x = random.randint(-200, 200)
-        y = random.randint(-200, 200)
-        square(random.randint(100, 200), x, y, fill)
-
+        x = random.randint(-100, 100)
+        y = random.randint(-100, 100)
+        square(random.randint(40, 80), x, y, fill)
+    if shape == 'pentagon':
+        fill =  random.randint(0, 1)
+        t.fillcolor(i)
+        t.pencolor(i)
+        x = random.randint(-100, 100)
+        y = random.randint(-100, 100)
+        pentagon(random.randint(30, 70), x, y, fill)
+    if shape == 'hexagon':
+        fill =  random.randint(0, 1)
+        t.fillcolor(i)
+        t.pencolor(i)
+        x = random.randint(-100, 100)
+        y = random.randint(-100, 100)
+        hexagon(random.randint(20, 60), x, y, fill)
+    if shape == 'octagon':
+        fill =  random.randint(0, 1)
+        t.fillcolor(i)
+        t.pencolor(i)
+        x = random.randint(-100, 100)
+        y = random.randint(-100, 100)
+        octagon(random.randint(10, 50), x, y, fill)
+    
+t.hideturtle()
 wn.mainloop()
