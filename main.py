@@ -1,0 +1,1 @@
+exec(open('1.2.2/a122_catch_a_turtle.py').read())
